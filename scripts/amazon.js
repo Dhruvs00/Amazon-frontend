@@ -24,7 +24,7 @@ const html=`<div class="product-container">
 </div>
 
 <div class="product-quantity-container">
-  <select>
+  <select class='qselect'>
     <option selected value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>
@@ -63,13 +63,14 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
         matchingitem=item;
       }
     })
+    const quantityselected=document.querySelector('.qselect').value;
     if(matchingitem){
-      matchingitem.quantity++;
+      matchingitem.quantity+=parseInt(quantityselected);
     }
     else{
     cart.push({
       productId:productId,
-      quantity:1
+      quantity:parseInt(quantityselected)
     });
     ;}
     let cartquantity=0;
