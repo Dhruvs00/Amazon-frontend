@@ -39,7 +39,7 @@ const html=`<div class="product-container">
 </div>
 
 <div class="product-price">
-  ${(product.priceCents/100).toFixed(2)}
+  ${(product.priceCents/100).toFixed}
 </div>
 
 <div class="product-quantity-container">
