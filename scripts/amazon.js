@@ -16,6 +16,12 @@ const products=[
     name:'Adults Plain Cotton T-Shirt - 2 Pack',
     rating:{stars:4.5,count:56},
     priceCents:799
+  },
+  {
+    image:'https://supersimple.dev/projects/amazon/images/products/black-2-slot-toaster.jpg',
+    name:' 2 Slot Toaster - Black',
+    rating:{stars:5,count:2197},
+    priceCents:1899
   }
 ];
 let productsHTML='';
@@ -39,7 +45,7 @@ const html=`<div class="product-container">
 </div>
 
 <div class="product-price">
-  ${(product.priceCents/100).toFixed}
+  ${(product.priceCents/100).toFixed(2)}
 </div>
 
 <div class="product-quantity-container">
